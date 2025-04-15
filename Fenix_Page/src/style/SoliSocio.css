@@ -1,0 +1,148 @@
+#TextContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 800px;
+    padding-left: 100px;
+    padding-top: 50px;
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+#Titulo1Socio, #Titulo2Socio {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Titulo2Socio {
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+}
+
+#ContTextoSocios {
+    margin-top: 40px;
+    padding-left: 10px;
+    border-left: 2px solid red;
+}
+
+#ContTextoSocios p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.contenedor-formulario {
+    width: calc(100% - 100px);
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#PdfPoryect {
+    width: 400px;
+}
+
+.contenedor-formulario input {
+    height: 40px;
+    width: 500px;
+    padding: 12px;
+    border: 2px solid red;
+    background-color: black;
+    color: white;
+    outline: none;
+    border-radius: 20px;
+    transition: border-color 0.3s ease;
+    font-size: 16px;
+    margin: 20px 20px; /* 100px de separación total entre inputs (50px de cada lado) */
+}
+
+::placeholder {
+    color: white;
+}
+
+#descripcionProyecto {
+    width: 100%;
+    max-width: 1080px; /* Máximo ancho en pantallas grandes */
+    height: 200px;
+    resize: vertical; /* Permite que el usuario cambie la altura si lo desea */
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+    #descripcionProyecto {
+        height: 150px; /* Menos altura en pantallas pequeñas */
+    }
+
+    .contenedor-formulario input {
+        width: 90%; /* Ancho más pequeño para pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    #descripcionProyecto {
+        height: 120px; /* Menor altura en pantallas muy pequeñas */
+    }
+
+    .contenedor-formulario input {
+        width: 100%; /* Ancho completo en pantallas muy pequeñas */
+    }
+}
+
+.contenedor-formulario input::placeholder {
+    color: white;
+    opacity: 0.7;
+}
+
+.contenedor-formulario input:hover, 
+.contenedor-formulario input:focus {
+    border-color: rgb(90, 16, 16);
+}
+
+
+#PdfPoryect {
+    width: 100%; /* Se ajusta al 100% del contenedor */
+    max-width: 400px; /* Ancho máximo de 400px en pantallas grandes */
+    height: auto; /* Mantiene la relación de aspecto de la imagen o documento */
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+    #PdfPoryect {
+        max-width: 300px; /* Se reduce el tamaño en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    #PdfPoryect {
+        max-width: 250px; /* Se ajusta aún más para pantallas muy pequeñas */
+    }
+}
+
+
+.btn-enviar {
+    top: 10px;
+    align-self: flex-end;
+    background-color: red;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.btn-enviar:hover {
+    transform: scale(1.1);
+    background-color: darkred;
+}

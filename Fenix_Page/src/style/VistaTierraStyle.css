@@ -1,0 +1,45 @@
+.padre{
+    position: relative;
+    width: 600px;
+    height: 300px;
+}
+.earth-live-view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 24px;
+    background: linear-gradient(to bottom, black, #1a1a1a, black);
+    color: white;
+}
+
+.earth-title {
+    font-size: 1.875rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    color: #3b82f6;
+    text-shadow: 2px 2px 10px rgba(0, 0, 255, 0.5);
+}
+
+.earth-video-container {
+    width: 100%;
+    max-width: 900px;
+    aspect-ratio: 16 / 9;
+    border: 4px solid #3b82f6;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+.earth-video {
+    width: 100%;
+    height: 100%;
+}
+
+.earth-source {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #d1d5db;
+    font-style: italic;
+}

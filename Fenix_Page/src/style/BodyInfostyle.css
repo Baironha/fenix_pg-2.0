@@ -1,0 +1,174 @@
+/* Estilos generales */
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos de la imagen y su contenedor */
+#ContainerImgBodyInfo {
+    position: absolute;
+    right: 100px; /* 100px del borde derecho */
+    bottom: 0;
+    width: 200px;
+    height: auto;
+    z-index: -1;
+    animation: growAndGlow 10s infinite ease-in-out, glowing 0.5s infinite alternate;
+}
+
+#ImgBodyInfo {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;  /* Opcional: para redondear las esquinas */
+}
+
+/* Animación de crecimiento y retroceso */
+@keyframes growAndGlow {
+    0% {
+        transform: scale(1); /* Tamaño original */
+    }
+    50% {
+        transform: scale(2); /* Tamaño duplicado */
+    }
+    100% {
+        transform: scale(1); /* Tamaño original */
+    }
+}
+
+/* Contenedor principal */
+.body-container {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 100px;
+    padding-top: 50px;
+}
+
+/* Contenedor de texto */
+.text-container {
+    max-width: 800px;
+}
+
+/* Títulos generales */
+.title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;  /* Color normal para los títulos */
+    margin-bottom: 10px;
+}
+
+/* Solo el título central con efecto transparente y contorno blanco */
+.title-transparent {
+    color: transparent;  /* Hace el texto invisible */
+    -webkit-text-stroke: 2px white;  /* Contorno blanco */
+}
+
+/* Secciones */
+.section {
+    margin-top: 40px;
+    padding-left: 10px;
+    border-left: 2px solid red;
+}
+
+/* Preguntas */
+.question {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Párrafos */
+p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Listas */
+ol {
+    padding-left: 20px;
+}
+
+ol li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Media Query para pantallas medianas (tabletas) */
+@media (max-width: 768px) {
+    #ContainerImgBodyInfo {
+        width: 150px; /* Ajusta el tamaño de la imagen */
+        right: 50px;  /* Reduce la distancia desde el borde derecho */
+    }
+
+    .body-container {
+        flex-direction: column; /* Cambia la disposición a columna */
+        padding-left: 20px;
+        padding-top: 30px;
+    }
+
+    .text-container {
+        max-width: 90%; /* Ajusta el ancho del contenedor de texto */
+        margin: 0 auto;
+    }
+
+    .title {
+        font-size: 2.5rem; /* Reduce el tamaño de los títulos */
+    }
+
+    .title-transparent {
+        -webkit-text-stroke: 1.5px white; /* Reduce el grosor del contorno */
+    }
+
+    .question {
+        font-size: 1.5rem; /* Ajusta el tamaño de las preguntas */
+    }
+
+    p {
+        font-size: 1.1rem; /* Ajusta el tamaño de los párrafos */
+    }
+
+    ol li {
+        font-size: 1.1rem; /* Ajusta el tamaño de las listas */
+    }
+}
+
+/* Media Query para pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+    #ContainerImgBodyInfo {
+        width: 120px; /* Ajusta el tamaño de la imagen */
+        right: 20px;  /* Reduce aún más la distancia desde el borde derecho */
+    }
+
+    .body-container {
+        flex-direction: column; /* Cambia la disposición a columna */
+        padding-left: 10px;
+        padding-top: 20px;
+    }
+
+    .text-container {
+        max-width: 100%; /* Ajusta el ancho del contenedor de texto */
+        margin: 0 auto;
+    }
+
+    .title {
+        font-size: 2rem; /* Reduce el tamaño del título */
+    }
+
+    .title-transparent {
+        -webkit-text-stroke: 1px white; /* Reduce el grosor del contorno */
+    }
+
+    .question {
+        font-size: 1.4rem; /* Ajusta el tamaño de las preguntas */
+    }
+
+    p {
+        font-size: 1rem; /* Ajusta el tamaño de los párrafos */
+    }
+
+    ol li {
+        font-size: 1rem; /* Ajusta el tamaño de las listas */
+    }
+}

@@ -1,0 +1,125 @@
+/* Animación para ImgAdministracion */
+#ImgAdminNegocio {
+    width: 200px;
+    transition: filter 0.3s ease-in-out;
+}
+
+#ImgAdminNegocio:hover {
+    filter: brightness(0) invert(1);
+}
+
+#ImgDtscients {
+    width: 200px;
+    transition: filter 0.3s ease-in-out;
+}
+
+#ImgDtscients:hover {
+    filter: brightness(0) invert(1);
+}
+
+#ImgEconomia {
+    width: 200px;
+    transition: filter 0.3s ease-in-out;
+}
+
+#ImgEconomia:hover {
+    filter: brightness(0) invert(1);
+}
+
+/* Estilos del contenedor de los cursos */
+#ContMisCursos {
+    position: relative;
+    margin-bottom: 10px;
+    height: auto; /* Se ajusta el alto dinámicamente */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas grandes */
+    gap: 30px;
+    padding: 30px;
+    justify-content: center;
+}
+
+/* Estilos de los títulos */
+#MisCursos {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: rgb(241, 229, 229);
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#SubMisCursos {
+    font-size: 50px;
+    font-weight: bold;
+    color: transparent;
+    -webkit-text-stroke: 2px rgb(255, 255, 255);
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Estilos de las tarjetas */
+#ContMisCursos > div {
+    background: #010311;
+    border-radius: 16px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgb(77, 19, 19);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#ContMisCursos > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgb(255, 0, 0);
+}
+
+/* Estilo de los títulos dentro de las tarjetas */
+#ContMisCursos h2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #a88a8a;
+    margin-bottom: 10px;
+}
+
+/* Estilo del texto dentro de las tarjetas */
+#ContMisCursos p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.5;
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+    #ContMisCursos {
+        grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+        gap: 20px; /* Reducir espacio entre los elementos */
+    }
+
+    #MisCursos {
+        font-size: 2.5rem; /* Ajustar tamaño de título en móviles */
+    }
+
+    #SubMisCursos {
+        font-size: 40px; /* Ajustar tamaño de subtítulo en móviles */
+    }
+
+    #ContMisCursos > div {
+        padding: 20px; /* Reducir padding en las tarjetas */
+    }
+
+    #ContMisCursos h2 {
+        font-size: 16px; /* Reducir tamaño del título en las tarjetas */
+    }
+
+    #ContMisCursos p {
+        font-size: 12px; /* Reducir tamaño del texto dentro de las tarjetas */
+    }
+
+    /* Ajustar tamaño de las imágenes en móviles */
+    #ImgAdminNegocio, #ImgDtscients, #ImgEconomia {
+        width: 150px; /* Hacer las imágenes más pequeñas en móviles */
+    }
+}

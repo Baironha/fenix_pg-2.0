@@ -1,0 +1,123 @@
+
+#TituloGestionUsu {
+    left: 40%;
+}
+
+
+#TablaUsuarios tr:nth-child(even) {
+    background-color: #222;
+}
+
+/* Efecto de hover en las filas de la tabla */
+#TablaUsuarios tr:hover {
+    background-color: #444;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilo para los botones */
+#ContainerBtn button {
+    margin-left: 100px; /* Los botones estarán a 10px del borde izquierdo */
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #333; /* Color de fondo oscuro */
+    border: 2px solid #555;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto de hover para los botones */
+#ContainerBtn button:hover {
+    background-color: #444; /* Cambio de color al pasar el ratón */
+    transform: scale(1.1); /* Efecto de aumento al pasar el ratón */
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.5); /* Sombra sutil */
+}
+
+/* Efecto de focus para los botones */
+
+/* Estilo para el formulario */
+#ContFormulario {
+    top: 40px;
+    position: absolute;
+    right: 100px; /* Formulario a 10px del borde derecho */
+    width: 400px; /* Ancho de 400px */
+    height: 400px; /* Alto de 400px */
+    background-color: #222; /* Fondo oscuro */
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7); /* Sombra para el formulario */
+    animation: slideInFromRight 1s ease-out; /* Animación de deslizamiento */
+}
+
+/* Animación de deslizamiento desde la derecha */
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%); /* Comienza fuera de la pantalla */
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Estilo de los inputs en el formulario */
+#ContFormulario input {
+    width: 95%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    font-size: 16px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+/* Estilo de los inputs al tener foco */
+#ContFormulario input:focus {
+    border-color: #ff8c00; /* Color de borde al hacer foco */
+    outline: none;
+    transform: translateY(-5px); /* Movimiento hacia arriba al enfocarse */
+}
+
+
+/* Estilo para el contenedor de la tabla */
+#ContainerTabla {
+    margin-top: 20px;
+    padding: 20px;
+    padding-right: 10px; /* Ajuste de padding-right para dejar 10px del borde derecho */
+    background-color: #222;
+    border-radius: 8px;
+    color: white;
+    max-width: calc(100% - 10px); /* Asegura que el contenedor ocupe el 100% menos 10px a la derecha */
+    margin-left: 230px; /* Asegura que el contenedor de la tabla esté a 200px del borde izquierdo */
+}
+
+/* Estilo para la tabla */
+#Tablatrabajador {
+    width: 100%; /* Aseguramos que la tabla ocupe el 100% del contenedor */
+    border-collapse: collapse;
+}
+
+#Tablatrabajador th, #Tablatrabajador td {
+    padding: 10px;
+    border: 1px solid #555;
+    text-align: left;
+}
+
+#Tablatrabajador th {
+    background-color: #444;
+}
+
+#Tablatrabajador tr:nth-child(even) {
+    background-color: #333;
+}
+
+/* Efecto de hover en las filas de la tabla */
+#Tablatrabajador tr:hover {
+    background-color: #444;
+    transition: background-color 0.3s ease;
+}

@@ -1,0 +1,101 @@
+/* Estilo general del footer */
+#padreFooter {
+    color: #fff;  /* Color de texto blanco */
+    font-family: 'Arial', sans-serif;
+}
+
+/* Contenedor principal del footer */
+footer {
+    padding: 40px 0;
+}
+
+/* Contenedor para las secciones del footer */
+.footer-container {
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;  /* Espaciado entre las secciones ajustado para ser más responsivo */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Sección individual del footer */
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 300;
+    color: #ecf0f1;  /* Color de los encabezados */
+}
+
+/* Estilo de los párrafos dentro de las secciones */
+.footer-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #bdc3c7;  /* Color más claro para los textos */
+    margin-bottom: 10px;
+}
+
+/* Footer inferior */
+.footer-bottom {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilo de los textos en la parte inferior */
+.footer-bottom h4 {
+    font-size: 1.2rem;
+    font-weight: 100;
+    color: #ecf0f1;
+}
+
+/* Efecto de hover en las secciones */
+.footer-section h3:hover {
+    color: #1abc9c;  /* Color verde claro al pasar el mouse */
+    transition: 0.3s;
+}
+
+/* Adaptación a pantallas pequeñas (responsividad) */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;  /* Las secciones se apilan una encima de la otra */
+        gap: 20px;
+        padding: 0 20px;  /* Agrega un pequeño padding en los laterales */
+    }
+
+    .footer-section h3 {
+        font-size: 1.3rem;  /* Ajustar tamaño del título en pantallas pequeñas */
+    }
+
+    .footer-section p {
+        font-size: 0.9rem;  /* Reducir tamaño del texto en pantallas pequeñas */
+    }
+
+    .footer-bottom {
+        padding: 10px;
+    }
+
+    /* Sección de pie de página */
+    .footer-bottom h4 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-section h3 {
+        font-size: 1.2rem;  /* Ajustar aún más el tamaño en pantallas muy pequeñas */
+    }
+
+    .footer-section p {
+        font-size: 0.9rem;  /* Reducir aún más el tamaño del texto */
+    }
+
+    .footer-container {
+        gap: 10px;  /* Reducir espacio entre las secciones en pantallas más pequeñas */
+    }
+}

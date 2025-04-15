@@ -1,0 +1,78 @@
+{
+  "Usuarios": [
+    {
+      "id": "7531",
+      "rol": "Admin",
+      "nombre": "Bairon Horna",
+      "email": "bhorna@fwdcostarica.com",
+      "password": "12345",
+      "direccion": "boulevard del sol 3",
+      "foto": "https://bucketbyronimg.s3.us-east-2.amazonaws.com/fotopersonal.jpg"
+    },
+    {
+      "id": "8d41",
+      "rol": "Usuario",
+      "nombre": "Barry Vega",
+      "email": "bvegafwdcostarica.com",
+      "password": "12345vega",
+      "direccion": "san ramon",
+      "foto": "https://bucketbyronimg.s3.us-east-2.amazonaws.com/laptop2.jpg"
+    },
+    {
+      "id": "af4c",
+      "rol": "Usuario",
+      "nombre": "Nombre",
+      "email": "email",
+      "password": "contra",
+      "direccion": "direccion",
+      "InputNombre": "Nombre",
+      "InputEmail": "email",
+      "InputPassword": "contra",
+      "InputDireccion": "direccion"
+    }
+  ],
+  "trabajadores": [
+    {
+      "id": "17c1",
+      "rol": "Admin",
+      "nombre": "Bairon Horna Alvarez",
+      "email": "bayronha077@gamil.com",
+      "password": "12345678",
+      "direccion": "puntarenas cr",
+      "salario": "1.300.000"
+    },
+    {
+      "id": "b01b",
+      "rol": "Admin",
+      "nombre": "fabricio vargas",
+      "email": "dvargas@fwdcostarica.com",
+      "password": "fabri",
+      "direccion": "Roble puntarenas",
+      "salario": "100"
+    }
+  ],
+  "SolicitudSocio": [
+    {
+      "id": "7f70",
+      "rol": "Solicitante",
+      "nombre": "Steven Salas",
+      "email": "ssalasl@fwdcostarica.com",
+      "telSocio": "+506 87409661",
+      "nombreproyecto": "fwd",
+      "descripcion": "institucion de programadores",
+      "pdfsocio": "https://bucketbyronimg.s3.us-east-2.amazonaws.com/como%20ser%20un%20buen%20lider.pdf",
+      "estado": "ESPERA"
+    },
+    {
+      "id": "355d",
+      "rol": "Solicitante",
+      "nombre": "Steven Salas",
+      "email": "bayronha077@gamil.com",
+      "telSocio": "+506 87409661",
+      "nombreproyecto": "FenixPage",
+      "descripcion": "itg39hg435ig",
+      "pdfsocio": "https://bucketbyronimg.s3.us-east-2.amazonaws.com/Etica%20profesional.pdf",
+      "estado": "ESPERA"
+    }
+  ]
+}

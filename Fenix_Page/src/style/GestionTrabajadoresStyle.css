@@ -1,0 +1,118 @@
+/* Estilo para el título */
+.title {
+    text-align: center;
+    font-size: 2rem;
+    color: #eaeaea;
+}
+
+/* Estilo para el contenedor de la tabla */
+.container-table {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 8px;
+    color: white;
+    max-width: 100%;
+    margin: auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo para la tabla */
+.container-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.container-table th, .container-table td {
+    padding: 10px;
+    border: 1px solid #555;
+    text-align: left;
+}
+
+.container-table th {
+    background-color: #444;
+    color: white;
+}
+
+.container-table tr:nth-child(even) {
+    background-color: #333;
+}
+
+.container-table tr:hover {
+    background-color: #444;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilo para los botones */
+.btn {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #333; /* Color de fondo oscuro */
+    border: 2px solid #555;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto de hover para los botones */
+.btn:hover {
+    background-color: #444;
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.5);
+}
+
+/* Estilo para el formulario */
+.form-container {
+    position: absolute;
+    top: 40px;
+    right: 100px;
+    width: 400px;
+    height: 400px;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+    animation: slideInFromRight 1s ease-out;
+}
+
+/* Animación de deslizamiento desde la derecha */
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Estilo de los inputs en el formulario */
+.form-container input {
+    width: 95%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    font-size: 16px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+/* Estilo de los inputs al tener foco */
+.form-container input:focus {
+    border-color: #ff8c00;
+    outline: none;
+    transform: translateY(-5px);
+}
+
+/* Estilo para los checkboxes */
+.container-table td input[type="checkbox"] {
+    margin: 0;
+    cursor: pointer;
+}

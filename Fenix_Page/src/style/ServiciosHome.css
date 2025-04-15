@@ -1,0 +1,209 @@
+/* Animación para ImgAdministracion */
+#ImgAdministracion {
+  width: 200px;
+  transition: filter 0.3s ease-in-out;
+}
+
+#ImgAdministracion:hover {
+  filter: brightness(0) invert(1);
+}
+
+#ImgDesarrollo {
+  width: 200px;
+  transition: filter 0.3s ease-in-out;
+}
+
+#ImgDesarrollo:hover {
+  filter: brightness(0) invert(1);
+}
+
+#ImgDatos {
+  width: 200px;
+  transition: filter 0.3s ease-in-out;
+}
+
+#ImgDatos:hover {
+  filter: brightness(0) invert(1);
+}
+
+#ImgFinanciero {
+  width: 200px;
+  transition: filter 0.3s ease-in-out;
+}
+
+#ImgFinanciero:hover {
+  filter: brightness(0) invert(1);
+}
+
+#ContServicios {
+  position: relative;
+  margin-bottom: 10px;
+  height: 900px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+  gap: 30px;
+  padding: 30px;
+  justify-content: center;
+}
+
+/* Estilos de los títulos */
+.titulo-servicios {
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.titulo-principales {
+  font-size: 50px;
+  font-weight: bold;
+  color: transparent;
+  -webkit-text-stroke: 2px white;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Estilos de las tarjetas */
+#ContServicios > div {
+  background: #010311;
+  border-radius: 16px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#ContServicios > div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);
+}
+
+/* Estilo de los títulos dentro de las tarjetas */
+#ContServicios h2 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ff3b3b;
+  margin-bottom: 10px;
+}
+
+/* Estilo del texto dentro de las tarjetas */
+#ContServicios p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.5;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  #ContServicios {
+    grid-template-columns: 1fr; /* Una sola columna en móviles */
+    padding: 20px; /* Reduce el padding */
+    height: auto; /* Ajusta la altura de los contenedores */
+  }
+
+  .titulo-servicios {
+    font-size: 30px; /* Reduce el tamaño del título */
+  }
+
+  .titulo-principales {
+    font-size: 40px; /* Ajusta el tamaño del título */
+  }
+
+  #ContServicios > div {
+    padding: 20px; /* Ajusta el padding de las tarjetas */
+  }
+
+  #ContServicios h2 {
+    font-size: 16px; /* Ajusta el tamaño del título dentro de las tarjetas */
+  }
+
+  #ContServicios p {
+    font-size: 12px; /* Ajusta el tamaño del texto dentro de las tarjetas */
+  }
+
+  /* Reducción del tamaño de las imágenes */
+  #ImgAdministracion,
+  #ImgDesarrollo,
+  #ImgDatos,
+  #ImgFinanciero {
+    width: 150px; /* Ajusta el tamaño de las imágenes */
+  }
+}
+
+/* Media Query para pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+  #ContServicios {
+    grid-template-columns: 1fr; /* Una sola columna en móviles */
+    padding: 15px; /* Reduce aún más el padding */
+  }
+
+  .titulo-servicios {
+    font-size: 25px; /* Ajusta el tamaño del título */
+  }
+
+  .titulo-principales {
+    font-size: 35px; /* Ajusta el tamaño del título */
+  }
+
+  #ContServicios > div {
+    padding: 15px; /* Ajusta el padding de las tarjetas */
+  }
+
+  #ContServicios h2 {
+    font-size: 14px; /* Ajusta el tamaño del título dentro de las tarjetas */
+  }
+
+  #ContServicios p {
+    font-size: 11px; /* Ajusta el tamaño del texto dentro de las tarjetas */
+  }
+
+  /* Reducción del tamaño de las imágenes */
+  #ImgAdministracion,
+  #ImgDesarrollo,
+  #ImgDatos,
+  #ImgFinanciero {
+    width: 120px; /* Ajusta aún más el tamaño de las imágenes */
+  }
+}
+
+/* Estilo para el botón de contacto */
+#BtnContactServicios {
+  position: absolute;  /* Utilizamos fixed para que el botón se quede fijo en la pantalla */
+  top: 4100px;         /* Centrado vertical */
+  right: 590px;       /* 1px del borde derecho */
+  transform: translateY(-50%);  /* Ajuste para que esté perfectamente centrado verticalmente */
+  background: linear-gradient(45deg, #ce3a2d, #ff0000);
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  font-weight: bold;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: fadeIn 1s ease-in-out;
+}
+
+#BtnContactServicios:hover {
+  background: linear-gradient(45deg, #551208, #cc2212);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  transform: translateY(-50%) scale(1.1);
+}
+
+#BtnContactServicios:active {
+  transform: translateY(-50%) scale(0.98);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

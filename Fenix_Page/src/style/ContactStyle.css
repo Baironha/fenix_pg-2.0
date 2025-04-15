@@ -1,0 +1,182 @@
+#padre {
+    position: absolute;
+    top: 55%;
+    right: 100px; /* 100px desde el borde derecho */
+    transform: translateY(-50%); /* Centra verticalmente */
+    padding: 20px;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    margin-top: 300px; /* 10px de margen superior */
+}
+
+#ContainerFormContact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 800px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+#Formcontact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#hijo {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Espacio entre los inputs */
+    width: 100%;
+}
+
+#LabelContact {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: white; /* Asegura que los labels sean blancos */
+    text-align: left; /* Los labels alineados a la izquierda */
+}
+
+#InputContactName,
+#InputContactEmail {
+    height: 70px;
+    width: 666px; /* 666px de ancho */
+    padding: 12px;
+    border: 2px solid red;
+    background-color: black;
+    color: white;
+    outline: none;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+    margin-bottom: 10px; /* Espacio entre los inputs */
+}
+
+#InputContactName::placeholder,
+#InputContactEmail::placeholder {
+    color: white;
+    opacity: 0.7;
+}
+
+#InputContactName:hover,
+#InputContactEmail:hover,
+#InputContactName:focus,
+#InputContactEmail:focus {
+    border-color: rgb(87, 14, 14);
+}
+
+textarea[name="message"] {
+    width: 800px;
+    height: 100px;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 2px solid red;
+    background-color: black;
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    font-size: 16px;
+    resize: none;
+    transition: border-color 0.3s ease;
+}
+
+textarea[name="message"]::placeholder {
+    color: rgb(255, 255, 255);
+    opacity: 0.7;
+}
+
+textarea[name="message"]:hover,
+textarea[name="message"]:focus {
+    border-color: rgb(75, 12, 12);
+}
+
+#BtnSubmit {
+    align-self: flex-end;
+    background-color: red;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+#BtnSubmit:hover {
+    transform: scale(1.1);
+    background-color: darkred;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    #padre {
+        right: 20px; /* Ajusta el margen derecho en pantallas pequeñas */
+        top: 20%;
+        margin-top: 0;
+    }
+
+    #ContainerFormContact {
+        padding: 10px;
+        width: 90%; /* Ajusta el ancho al 90% */
+        max-width: 100%; /* Elimina el máximo de 800px */
+    }
+
+    #InputContactName,
+    #InputContactEmail,
+    textarea[name="message"] {
+        width: 100%; /* Hace que los inputs y textarea ocupen el 100% del ancho */
+    }
+
+    #BtnSubmit {
+        width: 100%; /* Hace que el botón de submit ocupe todo el ancho */
+        align-self: stretch; /* Hace que se alinee a todo lo largo del contenedor */
+    }
+
+    #hijo {
+        flex-direction: column; /* Cambia la dirección de los inputs a columna */
+        gap: 15px; /* Menos espacio entre los inputs */
+    }
+
+    #InputContactName,
+    #InputContactEmail {
+        width: 100%; /* Ajusta los inputs al 100% en pantallas pequeñas */
+    }
+
+    /* Ajusta el tamaño del botón de submit */
+    #BtnSubmit {
+        margin-top: 20px; /* Añade más espacio en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Ajustes para pantallas muy pequeñas */
+    #padre {
+        right: 10px; /* Reduce aún más el margen derecho */
+        top: 15%;
+    }
+
+    #ContainerFormContact {
+        width: 95%; /* Ajusta el contenedor a un 95% */
+    }
+
+    #hijo {
+        flex-direction: column; /* Cambia la dirección de los inputs a columna */
+        gap: 10px; /* Reduce aún más el espacio entre los inputs */
+    }
+
+    #InputContactName,
+    #InputContactEmail,
+    textarea[name="message"] {
+        width: 100%; /* Hace que los inputs y textarea ocupen el 100% */
+    }
+
+    #BtnSubmit {
+        width: 100%; /* Asegura que el botón ocupe todo el ancho */
+    }
+}

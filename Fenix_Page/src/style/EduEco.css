@@ -1,0 +1,50 @@
+#padreseccioneseco{
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 100px;
+    padding-top: 100px;
+}
+
+#Semanas{
+    max-width: 800px;
+}
+#Seccion{
+    margin-top: 40px;
+    padding-left: 10px;
+    border-left: 2px solid red;
+}
+
+
+#T1{
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;  /* Color normal para los títulos */
+    margin-bottom: 10px;
+}
+
+#T2{
+    color: transparent;  /* Hace el texto invisible */
+    -webkit-text-stroke: 2px white;  /* Contorno blanco */
+}
+
+#Material{
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#Contenido{
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Listas */
+ol {
+    padding-left: 20px;
+}
+
+ol li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}

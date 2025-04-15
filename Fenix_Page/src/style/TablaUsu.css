@@ -1,0 +1,183 @@
+#TituloGestionUsu {
+    left: 40%;
+}
+
+/* Efecto de hover en las filas de la tabla */
+#TablaUsuarios tr:nth-child(even) {
+    background-color: #222;
+}
+
+#TablaUsuarios tr:hover {
+    background-color: #444;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilo para los botones */
+#ContainerBtn button {
+    margin-left: 100px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #333; /* Color de fondo oscuro */
+    border: 2px solid #555;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto de hover para los botones */
+#ContainerBtn button:hover {
+    background-color: #444;
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.5); /* Sombra sutil */
+}
+
+/* Estilo para el formulario */
+#ContFormulario {
+    top: 40px;
+    position: absolute;
+    right: 100px;
+    width: 400px;
+    height: 400px;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+    animation: slideInFromRight 1s ease-out;
+}
+
+/* Animación de deslizamiento desde la derecha */
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Estilo de los inputs en el formulario */
+#ContFormulario input {
+    width: 95%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    font-size: 16px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+/* Estilo de los inputs al tener foco */
+#ContFormulario input:focus {
+    border-color: #ff8c00;
+    outline: none;
+    transform: translateY(-5px);
+}
+
+/* Estilo para el contenedor de la tabla */
+#ContainerTabla {
+    margin-top: 20px;
+    padding: 20px;
+    padding-right: 10px;
+    background-color: #222;
+    border-radius: 8px;
+    color: white;
+    max-width: calc(100% - 10px);
+    margin-left: 230px;
+}
+
+/* Estilo para la tabla */
+#TablaUsuarios {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#TablaUsuarios th, #TablaUsuarios td {
+    padding: 10px;
+    border: 1px solid #555;
+    text-align: left;
+}
+
+#TablaUsuarios th {
+    background-color: #444;
+}
+
+#TablaUsuarios tr:nth-child(even) {
+    background-color: #333;
+}
+
+#TablaUsuarios tr:hover {
+    background-color: #444;
+    transition: background-color 0.3s ease;
+}
+
+/* Responsividad para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    #GestionUsuCont {
+        width: 90%;
+        margin-left: 0;
+    }
+
+    #ContFormulario {
+        width: 80%;
+        right: 0;
+        margin-top: 20px;
+        position: relative;
+    }
+
+    #ContainerTabla {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    #TituloGestionUsu {
+        left: 10%;
+        font-size: 20px;
+    }
+
+    #ContainerBtn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #ContainerBtn button {
+        width: 80%;
+        margin-left: 0;
+        font-size: 14px;
+    }
+
+    #TablaUsuarios {
+        font-size: 14px;
+    }
+
+    #TablaUsuarios th, #TablaUsuarios td {
+        padding: 8px;
+    }
+}
+
+/* Responsividad para pantallas muy pequeñas */
+@media screen and (max-width: 480px) {
+    #ContFormulario {
+        width: 90%;
+        padding: 15px;
+    }
+
+    #ContainerBtn button {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+
+    #TablaUsuarios th, #TablaUsuarios td {
+        padding: 6px;
+    }
+
+    #TablaUsuarios {
+        font-size: 12px;
+    }
+}

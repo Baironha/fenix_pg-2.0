@@ -1,0 +1,92 @@
+#T1Like {
+    font-size: 4vw; /* Usa un valor relativo para que el tamaño se ajuste a la pantalla */
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#T2Like {
+    font-size: 4vw; /* Tamaño también adaptativo */
+    font-weight: bold;
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#ContTextLD {
+    text-align: center;
+}
+
+#ContBTNS {
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap; /* Permite que los botones se ajusten en filas */
+    justify-content: center; /* Centra los botones */
+}
+
+/* Estilo de los botones */
+#BtnLike, #BtnDislike {
+    width: 200px;
+    padding: 12px 24px;
+    background-color: #ff4c4c; /* Fondo rojo */
+    color: white; /* Color del texto blanco */
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Efecto de clic */
+#BtnLike:active, #BtnDislike:active {
+    transform: scale(0.9); /* Reduce el tamaño al hacer clic */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Reduce la sombra */
+}
+
+/* Media queries para responsividad en pantallas pequeñas */
+@media (max-width: 768px) {
+    #T1Like, #T2Like {
+        font-size: 6vw; /* Ajusta el tamaño en pantallas más pequeñas */
+    }
+
+    #BtnLike, #BtnDislike {
+        width: 150px; /* Reducir el tamaño de los botones en pantallas pequeñas */
+        font-size: 16px; /* Ajustar tamaño del texto */
+    }
+
+    #ContBTNS {
+        gap: 5px; /* Menor espacio entre los botones */
+    }
+}
+
+@media (max-width: 480px) {
+    #T1Like, #T2Like {
+        font-size: 8vw; /* Ajuste más pequeño en dispositivos muy pequeños */
+    }
+
+    #BtnLike, #BtnDislike {
+        width: 120px; /* Ajustar el tamaño de los botones */
+        font-size: 14px; /* Reducir el tamaño del texto */
+    }
+}
+
+/* Animación de desvanecimiento al cargar */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

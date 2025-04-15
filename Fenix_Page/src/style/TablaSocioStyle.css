@@ -1,0 +1,174 @@
+/* Estilo para el contenedor de la tabla */
+#ContainerTablaSocio {
+    margin-top: 20px;
+    padding: 20px;
+    padding-right: 10px;
+    background-color: #222;
+    border-radius: 8px;
+    color: white;
+    max-width: calc(100% - 10px);
+    margin-left: 230px;
+    overflow-x: auto; /* Asegura que si la tabla es muy ancha, se pueda hacer scroll horizontal */
+    max-height: 600px; /* Limita la altura máxima para evitar que se desborde */
+    box-sizing: border-box; /* Asegura que el padding no afecte al tamaño total */
+}
+
+/* Estilo para la tabla */
+#TablaSocio {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; /* Fija el ancho de las columnas para evitar desbordes */
+}
+
+#TablaSocio th, #TablaSocio td {
+    padding: 10px;
+    border: 1px solid #555;
+    text-align: left;
+    overflow: hidden; /* Evita que el contenido de las celdas sobresalga */
+    text-overflow: ellipsis; /* Muestra "..." cuando el contenido es demasiado largo */
+    white-space: nowrap; /* Evita el salto de línea dentro de las celdas */
+}
+
+/* Estilo para las filas de la tabla */
+#TablaSocio tr:nth-child(even) {
+    background-color: #333;
+}
+
+#TablaSocio tr:hover {
+    background-color: #444;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilo para el contenedor del formulario */
+#ContFormulariosocio {
+    margin-top: 200px;
+    position: absolute;
+    padding: 20px;
+    background-color: #222;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+    animation: slideInFromRight 1s ease-out;
+    max-width: 400px;
+    margin-left: 800px;
+}
+
+/* Animación de deslizamiento desde la derecha */
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Estilo de los inputs en el formulario */
+#ContFormulariosocio input {
+    width: 95%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    font-size: 16px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+/* Estilo de los inputs al tener foco */
+#ContFormulariosocio input:focus {
+    border-color: #ff8c00;
+    outline: none;
+    transform: translateY(-5px);
+}
+
+/* Estilo para los botones */
+#ContainerBtnsocio button {
+    margin-left: 100px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #333; /* Color de fondo oscuro */
+    border: 2px solid #555;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto de hover para los botones */
+#ContainerBtnsocio button:hover {
+    background-color: #444;
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.5); /* Sombra sutil */
+}
+
+/* Estilo del título */
+#TituloGestionsocio {
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+}
+
+/* Responsividad para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    #ContainerTablaSocio {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    #ContFormulariosocio {
+        width: 80%;
+        margin-left: 0;
+        position: relative;
+    }
+
+    #TituloGestionsocio {
+        font-size: 24px;
+    }
+
+    #ContainerBtnsocio {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #ContainerBtnsocio button {
+        width: 80%;
+        margin-left: 0;
+        font-size: 14px;
+    }
+
+    #TablaSocio {
+        font-size: 14px;
+    }
+
+    #TablaSocio th, #TablaSocio td {
+        padding: 8px;
+    }
+}
+
+/* Responsividad para pantallas muy pequeñas */
+@media screen and (max-width: 480px) {
+    #ContFormulariosocio {
+        width: 90%;
+        padding: 15px;
+    }
+
+    #ContainerBtnsocio button {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+
+    #TablaSocio th, #TablaSocio td {
+        padding: 6px;
+    }
+
+    #TablaSocio {
+        font-size: 12px;
+    }
+}
+
