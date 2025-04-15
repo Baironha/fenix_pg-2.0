@@ -1,9 +1,9 @@
 import React, { useState, useRef } from "react";
 import '../style/SoliSocio.css';
 import Swal from 'sweetalert2';
-import AWS from 'aws-sdk';
+/* import AWS from 'aws-sdk'; */
 import conexiones from "../Servicios/conexiones";
-import KAWS from "./KAWS";
+import KAWS from "../componentes/KAWS";
 
 function SolicitudSocio() {
     const [NombreSocio, SetNombreSocio] = useState("");
@@ -19,7 +19,7 @@ function SolicitudSocio() {
     const S3_BUCKET = 'bucketbyronimg';
     const REGION = 'us-east-2';
 
-    const s3 = KAWS()
+    const s3 = KAWS.amazon()
 
     const uploadPdfToS3 = async (file) => {
         const params = {
