@@ -20,7 +20,7 @@ function SubirImagen() {
   const S3_BUCKET = 'bucketbyronimg';
   const REGION = 'us-east-2';
 
-  const s3 = new KAWS()
+  const s3 = KAWS.amazon()
   
   const uploadImageToS3 = async (file) => {
     const params = {
