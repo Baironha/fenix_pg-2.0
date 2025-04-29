@@ -1,0 +1,5 @@
+outs:
+- md5: ac25cfd07ec76477d992fd953da3102a
+  size: 45754
+  hash: md5
+  path: global_inflation_data.csv
