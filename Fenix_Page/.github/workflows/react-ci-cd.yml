@@ -1,28 +1,40 @@
-name: React CI/CD
+name: Train and Upload Model to S3
 
 on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
 
 jobs:
-  build:
+  train_and_upload:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout código
-        uses: actions/checkout@v4
+    - name: Checkout repository
+      uses: actions/checkout@v4
 
-      - name: Configurar Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'  # Cambia el número si tu proyecto usa otra versión
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
 
-      - name: Instalar dependencias
-        run: npm install
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+        pip install boto3
 
-      - name: Construir proyecto
-        run: npm run build
+    - name: Train Model
+      run: |
+        python ScriptModeloML.py
+
+    - name: Upload model to S3
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_REGION: ${{ secrets.AWS_REGION }}
+        S3_BUCKET_NAME: ${{ secrets.S3_BUCKET_NAME }}
+      run: |
+        aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
+        aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
+        aws configure set region $AWS_REGION
+        aws s3 cp modelo_entrenado.pkl s3://$S3_BUCKET_NAME/models/modelo_entrenado.pkl
