@@ -1,86 +1,103 @@
-from flask import Flask, send_file
+from flask import Flask, send_file, abort
 import os
+import logging
+import re
 
 app = Flask(__name__)
 
-# Obtener la ruta absoluta correcta de la carpeta donde están los gráficos
-BASE_DIR = os.path.abspath(os.path.dirname(__file__))  # Directorio donde está este script
-GRAFICOS_DIR = os.path.abspath(os.path.join(BASE_DIR, "../Graficos"))  # Ruta de la carpeta de gráficos
+# Configurar logging
+logging.basicConfig(level=logging.INFO)
 
+# Validar nombre de archivo con regex
+def es_nombre_archivo_valido(nombre_archivo):
+    return re.fullmatch(r"[a-zA-Z0-9_\-ÁÉÍÓÚáéíóúñÑ ]+\.html", nombre_archivo) is not None
+
+# Ruta base segura
+BASE_DIR = os.path.abspath(os.path.dirname(__file__))  
+GRAFICOS_DIR = os.path.abspath(os.path.join(BASE_DIR, "../Graficos"))  
 
 if not os.path.exists(GRAFICOS_DIR):
-    print(f"ERROR: La carpeta de gráficos no existe: {GRAFICOS_DIR}")
+    logging.error(f"La carpeta de gráficos no existe: {GRAFICOS_DIR}")
 else:
-    print(f"La carpeta de gráficos se encuentra en: {GRAFICOS_DIR}")
+    logging.info(f"La carpeta de gráficos se encuentra en: {GRAFICOS_DIR}")
 
 """ GRAFICO DE LINEAS """
 @app.route('/Evolución_de_la_Inflación_Mundial.html')
 def get_grafico_inflacion_mundial():
-    path = os.path.join(GRAFICOS_DIR, 'Evolución_de_la_Inflación_Mundial.html')
+    nombre_archivo = 'Evolución_de_la_Inflación_Mundial.html'
+    if not es_nombre_archivo_valido(nombre_archivo):
+        abort(400, "Nombre de archivo no válido")
+    path = os.path.join(GRAFICOS_DIR, nombre_archivo)
     if os.path.exists(path):
-        print(f"Enviando archivo: {path}")
+        logging.info(f"Enviando archivo: {path}")
         return send_file(path)
-    else:
-        print(f"Archivo no encontrado: {path}")
-        return f"Archivo no encontrado: {path}", 404
+    logging.warning(f"Archivo no encontrado: {path}")
+    return f"Archivo no encontrado: {path}", 404
 
 """ GRAFICO DE AREA """
 @app.route('/Inflación_Promedio_por_País.html')
 def get_grafico_area():
-    path = os.path.join(GRAFICOS_DIR, 'Inflación_Promedio_por_País.html')
+    nombre_archivo = 'Inflación_Promedio_por_País.html'
+    if not es_nombre_archivo_valido(nombre_archivo):
+        abort(400, "Nombre de archivo no válido")
+    path = os.path.join(GRAFICOS_DIR, nombre_archivo)
     if os.path.exists(path):
-        print(f"Enviando archivo: {path}")
+        logging.info(f"Enviando archivo: {path}")
         return send_file(path)
-    else:
-        print(f"Archivo no encontrado: {path}")
-        return f"Archivo no encontrado: {path}", 404
+    logging.warning(f"Archivo no encontrado: {path}")
+    return f"Archivo no encontrado: {path}", 404
 
-""" GRAFICO CIRCULAR"""
+""" GRAFICO CIRCULAR """
 @app.route('/Distribucion_Inflacion_Mundial_Promedio.html')
 def get_grafico_circular():
-    path = os.path.join(GRAFICOS_DIR, 'Distribucion_Inflacion_Mundial_Promedio.html')
+    nombre_archivo = 'Distribucion_Inflacion_Mundial_Promedio.html'
+    if not es_nombre_archivo_valido(nombre_archivo):
+        abort(400, "Nombre de archivo no válido")
+    path = os.path.join(GRAFICOS_DIR, nombre_archivo)
     if os.path.exists(path):
-        print(f"Enviando archivo: {path}")
+        logging.info(f"Enviando archivo: {path}")
         return send_file(path)
-    else:
-        print(f"Archivo no encontrado: {path}")
-        return f"Archivo no encontrado: {path}", 404  
+    logging.warning(f"Archivo no encontrado: {path}")
+    return f"Archivo no encontrado: {path}", 404
 
-""" GRAFICO ML RL"""
+""" GRAFICO ML RL """
 @app.route('/Prediccion_vs_Valores_Reales.html')
 def get_grafico_ml_rl():
-    path = os.path.join(GRAFICOS_DIR, 'Prediccion_vs_Valores_Reales.html')
+    nombre_archivo = 'Prediccion_vs_Valores_Reales.html'
+    if not es_nombre_archivo_valido(nombre_archivo):
+        abort(400, "Nombre de archivo no válido")
+    path = os.path.join(GRAFICOS_DIR, nombre_archivo)
     if os.path.exists(path):
-        print(f"Enviando archivo: {path}")
+        logging.info(f"Enviando archivo: {path}")
         return send_file(path)
-    else:
-        print(f"Archivo no encontrado: {path}")
-        return f"Archivo no encontrado: {path}", 404
-    
+    logging.warning(f"Archivo no encontrado: {path}")
+    return f"Archivo no encontrado: {path}", 404
 
-""" GRAFICO CIRCULAR DT SCIENTS"""
+""" GRAFICO CIRCULAR DT SCIENTS """
 @app.route('/grafico_rentabilidad_data_science.html')
 def get_grafico_circular_dtscients():
-    path = os.path.join(GRAFICOS_DIR, 'grafico_rentabilidad_data_science.html')
+    nombre_archivo = 'grafico_rentabilidad_data_science.html'
+    if not es_nombre_archivo_valido(nombre_archivo):
+        abort(400, "Nombre de archivo no válido")
+    path = os.path.join(GRAFICOS_DIR, nombre_archivo)
     if os.path.exists(path):
-        print(f"Enviando archivo: {path}")
+        logging.info(f"Enviando archivo: {path}")
         return send_file(path)
-    else:
-        print(f"Archivo no encontrado: {path}")
-        return f"Archivo no encontrado: {path}", 404
+    logging.warning(f"Archivo no encontrado: {path}")
+    return f"Archivo no encontrado: {path}", 404
 
-
-
+""" GRAFICO COLUMNA """
 @app.route('/grafico_columna_top3_sitios_datase.html')  
 def get_grafico_columna_top3_sitios():
-    path = os.path.join(GRAFICOS_DIR, 'grafico_columna_top3_sitios_datase.html')
+    nombre_archivo = 'grafico_columna_top3_sitios_datase.html'
+    if not es_nombre_archivo_valido(nombre_archivo):
+        abort(400, "Nombre de archivo no válido")
+    path = os.path.join(GRAFICOS_DIR, nombre_archivo)
     if os.path.exists(path):
-        print(f"Enviando archivo: {path}")
+        logging.info(f"Enviando archivo: {path}")
         return send_file(path)
-    else:
-        print(f"Archivo no encontrado: {path}")
-        return f"Archivo no encontrado: {path}", 404
-
+    logging.warning(f"Archivo no encontrado: {path}")
+    return f"Archivo no encontrado: {path}", 404
 
 if __name__ == '__main__':
-    app.run(debug=True,  host='0.0.0.0', port=5000)
+    app.run(debug=True, host='0.0.0.0', port=5000)
