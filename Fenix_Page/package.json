@@ -10,10 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@fortawesome/free-regular-svg-icons": "^6.7.2",
     "aws-sdk": "^2.1692.0",
+    "framer-motion": "^12.9.4",
+    "lucide-react": "^0.507.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-icons": "^5.5.0",
     "react-router-dom": "^7.3.0",
     "sweetalert2": "^11.17.2"
   },

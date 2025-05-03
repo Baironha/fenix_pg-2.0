@@ -1,0 +1,12 @@
+version = 1
+
+[[analyzers]]
+name = "python"
+enabled = true
+
+  [analyzers.meta]
+  root = "."
+
+  [analyzers.config]
+  test_patterns = ["test_*.py"]
+  run_linters = ["flake8", "bandit"]

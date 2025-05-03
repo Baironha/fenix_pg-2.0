@@ -12,8 +12,20 @@ dist
 dist-ssr
 *.local
 
+.env
+
+
 /src/componentes/KAWS.jsx
 
+# Ignorar el archivo de claves
+k_aws.py
+/src/Graficos/k_aws
+
+# Archivos y directorios generados por DVC
+*.csv
+*.csv.dvc
+.dvc/
+*.dvc
 
 # Editor directories and files
 .vscode/*
